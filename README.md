@@ -4,6 +4,6 @@ This project was inspired by a project suggestion by Dr. Douglas Selent in the F
 The program takes a CSV file as input for the roster. It should be formatted as so:
 
     First Name,Last Name
-    FirstName,LastName,
+    FirstName,LastName
     ...
 As of 02/02/2020, there is a lack of error handling for incorrect input of some parameters. I also have not implemented a satisfaction measure for the success of group forming based on preferences.
