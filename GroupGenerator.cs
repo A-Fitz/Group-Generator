@@ -31,7 +31,7 @@ namespace GroupMaker
                         this.studentGroups.Add(new StudentGroup(this.properties.groupSize + remainder, i));
                 }
             }
-            else
+            else // use number of groups
             {
                 int studentCount = this.properties.studentList.Count;
                 this.groupSize = studentCount / this.properties.numberGroups;
@@ -59,12 +59,15 @@ namespace GroupMaker
                 copy.RemoveAt(0);
             }
 
-            // add best match for each group
-            foreach (StudentGroup sg in studentGroups)
+            while (copy.Count != 0)
             {
-                int indexBest = getIndexOfBestMatch(sg, copy);
-                sg.addMember(copy[indexBest]);
-                copy.RemoveAt(indexBest);
+                // add best match for each group
+                foreach (StudentGroup sg in studentGroups)
+                {
+                    int indexBest = getIndexOfBestMatch(sg, copy);
+                    sg.addMember(copy[indexBest]);
+                    copy.RemoveAt(indexBest);
+                }
             }
 
             // optimize

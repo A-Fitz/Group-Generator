@@ -1,5 +1,5 @@
 ﻿<NavigationWindow x:Class="GroupMaker.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="MainWindow" Height="450" Width="800" Source="MainPage.xaml" ShowsNavigationUI="False">
+    Title="MainWindow" Height="450" Width="800" Source="Pages/MainPage.xaml" ShowsNavigationUI="False">
 </NavigationWindow>
